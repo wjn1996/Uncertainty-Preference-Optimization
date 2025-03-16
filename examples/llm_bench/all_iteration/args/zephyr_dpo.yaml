@@ -1,0 +1,45 @@
+### model
+model_name_or_path: alignment-handbook/zephyr-7b-sft-full
+# adapter_name_or_path: outputs/llm_bench/init_stage/policy_dpo/zephyr-7b-sft-full/lora/checkpoint-4000
+adapter_name_or_path: outputs/llm_bench/iteration_stage_2/policy_dpo/zephyr-7b-sft-full-v2/lora/checkpoint-1800
+
+
+### method
+stage: dpo
+do_train: true
+finetuning_type: lora
+lora_target: all
+pref_beta: 0.1
+pref_loss: sigmoid  # choices: [sigmoid (dpo), orpo, simpo]
+# dpo_label_smoothing: 1.0e-3
+
+### dataset
+dataset: ultrafeedback_all_iter_pair
+template: zephyr
+cutoff_len: 1024
+# max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: outputs/llm_bench/all_iteration/policy_dpo/zephyr-7b-sft-full-v3/lora/
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-6
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 500

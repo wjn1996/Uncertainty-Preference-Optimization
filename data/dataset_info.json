@@ -1,0 +1,143 @@
+{
+    "ultralfeedback_pair": {
+        "file_name": "UltraFeedback/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "ultralfeedback_cls": {
+        "file_name": "UltraFeedback/cls_train_data.json",
+        "formatting": "cls",
+        "columns": {
+            "prompt": "instruction",
+            "label": "label"
+        }
+    },
+    "ultralfeedback_kto": {
+        "file_name": "UltraFeedback/kto_train_data.json",
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "messages",
+            "kto_tag": "label"
+        },
+        "tags": {
+            "role_tag": "role",
+            "content_tag": "content",
+            "user_tag": "user",
+            "assistant_tag": "assistant"
+        }
+    },
+    "ultrafeedback": {
+        "hf_hub_url": "llamafactory/ultrafeedback_binarized",
+        "ms_hub_url": "llamafactory/ultrafeedback_binarized",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "math_stepdpo_pair": {
+        "file_name": "MathStepDPO10k/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "math_stepdpo_cls": {
+        "file_name": "MathStepDPO10k/cls_train_data.json",
+        "formatting": "cls",
+        "columns": {
+            "prompt": "instruction",
+            "label": "label"
+        }
+    },
+    "ultrafeedback_iter1_pair": {
+        "file_name": "UltraFeedback/iteration_1/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "ultrafeedback_iter2_pair": {
+        "file_name": "UltraFeedback/iteration_2/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "math_stepdpo_iter1_pair": {
+        "file_name": "MathStepDPO10k/iteration_1/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "ultrafeedback_iter3_pair": {
+        "file_name": "UltraFeedback/iteration_3/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "ultrafeedback_all_iter_pair": {
+        "file_name": "UltraFeedback/all_iteration/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "math_stepdpo_iter2_pair": {
+        "file_name": "MathStepDPO10k/iteration_2/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "math_stepdpo_iter3_pair": {
+        "file_name": "MathStepDPO10k/iteration_3/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "math_stepdpo_all_iter_pair": {
+        "file_name": "MathStepDPO10k/all_iteration/pair_train_data.json",
+        "ranking": true,
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    
+}
