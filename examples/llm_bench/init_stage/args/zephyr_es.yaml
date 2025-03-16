@@ -1,0 +1,39 @@
+### model
+model_name_or_path: alignment-handbook/zephyr-7b-sft-full
+
+### method
+stage: es
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+### dataset
+dataset: ultralfeedback_cls
+template: zephyr
+cutoff_len: 2048
+# max_samples: 10000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: outputs/llm_bench/init_stage/estimator/zephyr-7b-sft-full/lora/
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 1
+learning_rate: 2.0e-5
+num_train_epochs: 2.0
+lr_scheduler_type: linear
+warmup_ratio: 0.1
+bf16: false
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.02
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 500
